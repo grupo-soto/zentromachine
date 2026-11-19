@@ -1,6 +1,7 @@
 # Zentromachine · web nueva (versión de prueba)
 
-Copia para revisar la web nueva de Zentromachine (portada, catálogo y ficha de cada máquina) antes de publicarla: https://grupo-soto.github.io/zentromachine/
+Copia para revisar la web nueva de Zentromachine (portada, catálogo, ficha de cada máquina, información legal y la
+página de «no está») antes de publicarla: https://grupo-soto.github.io/zentromachine/
 
 No sale en Google (noindex). Las máquinas son el catálogo real copiado de subastaszentromachine.com; precios, pedidos y
 subastas no funcionan todavía (los botones abren WhatsApp o el teléfono de ventas). El botón «Corregir» guarda las notas

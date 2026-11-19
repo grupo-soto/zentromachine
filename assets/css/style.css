@@ -141,7 +141,7 @@ i { font-style: normal; }
 .heroe__maqs img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; opacity: 0; visibility: hidden; filter: drop-shadow(0 16px 12px rgba(0, 0, 0, .24)); }
 .heroe__titulo { order: 2; position: relative; z-index: 0; font-size: clamp(58px, 17.4vw, 200px); line-height: .8; }
 .heroe__titulo span { display: block; white-space: nowrap; }
-.heroe__info { order: 3; display: grid; gap: 12px; margin-top: 20px; }
+.heroe__info { order: 3; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 20px; }
 .heroe__entrada { order: 3; }
 .heroe__entrada { font-size: 16.5px; line-height: 1.5; max-width: 46ch; color: var(--tinta-2); }
 /* la etiqueta cuelga de un cable desde arriba y se balancea (inicio.js) */
@@ -743,3 +743,99 @@ i { font-style: normal; }
 
 /* en los móviles más estrechos (360-380 px), los desplegables algo más pequeños para que no se corte «Destacados» */
 @media (max-width: 380px) { .sel select { font-size: 14.5px; } .sel { padding-right: 20px; } }
+
+/* ================================================================== */
+/* Información legal (legal.html): la etiqueta de la empresa con los   */
+/* datos de la LSSI, un índice-código y el texto                       */
+/* ================================================================== */
+.legal { padding-bottom: 72px; }
+.legal__cab { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 6px 0 28px; }
+.legal__titulo { font-size: clamp(54px, 16vw, 140px); }
+.legal__entrada { font-size: 17px; color: var(--tinta-2); max-width: 50ch; }
+.legal__entrada a, .legal__texto a { color: var(--negro); font-weight: 650; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.legal__entrada a:hover, .legal__texto a:hover { color: var(--o-boton); }
+.legal__in { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
+.legal__lado { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-content: start; min-width: 0; }
+.tag--legal .tag__cab b { font-size: 28px; }
+.tag--legal .tag__c b { font-size: 22px; }
+.tag--legal a.tag__c:hover b { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* los correos, en minúscula y a su anchura normal (en la etiqueta del pie y en la de la página legal) */
+.tag .tag__correo b { font-size: 17px; letter-spacing: 0; text-transform: none; font-stretch: 100%; font-weight: 650; }
+.legal__indice { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.legal__indice .chip { min-width: 0; }
+.legal__indice .chip b { font-size: 18px; }
+.legal__texto { min-width: 0; }
+.legal__texto section { scroll-margin-top: calc(var(--barra) + 16px); }
+.legal__texto section + section { margin-top: 52px; }
+.legal__texto h2 { display: flex; align-items: baseline; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--linea); font-stretch: 62%; font-weight: 800; font-size: clamp(34px, 9vw, 48px); line-height: .95; text-transform: uppercase; }
+.legal__texto h2 .lab { flex: none; font-stretch: 100%; color: var(--o-boton); }
+.legal__texto h3 { margin-top: 26px; font-size: 18px; font-weight: 650; letter-spacing: -.01em; line-height: 1.3; }
+.legal__texto p { margin-top: 10px; color: var(--tinta-2); max-width: 68ch; }
+.legal__texto ul { display: grid; gap: 10px; margin-top: 12px; max-width: 68ch; }
+.legal__texto li { position: relative; padding-left: 22px; color: var(--tinta-2); }
+.legal__texto li::before { content: ''; position: absolute; left: 0; top: .72em; width: 10px; height: 2px; background: var(--negro); }
+.legal__tabla { margin-top: 16px; background: var(--blanco); }
+.legal__tabla div { display: grid; gap: 4px; padding: 12px 14px 13px; border-bottom: 1px solid var(--linea); }
+.legal__tabla div:last-child { border-bottom: 0; }
+.legal__tabla dt { color: var(--tinta-2); }
+.legal__tabla dd { font-size: 15.5px; line-height: 1.5; }
+.legal__fecha { margin-top: 48px; color: var(--tinta-2); }
+
+/* ================================================================== */
+/* 404: la etiqueta de una máquina que no está en la campa             */
+/* ================================================================== */
+.nada { padding-bottom: 72px; overflow-x: clip; }
+.nada__in { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.nada__colgante { position: relative; width: min(256px, 72%); margin-left: auto; transform-origin: calc(100% - 23px) 0; }
+.nada__colgante .colgante__cable { height: 22px; }
+.tag--nada { filter: drop-shadow(0 10px 10px rgba(17, 18, 20, .18)); }
+.tag--nada .tag__cab b { font-size: 24px; }
+.tag--nada .tag__c b { font-size: 20px; }
+.tag--nada .tag__barras svg { height: 34px; }
+.nada__titulo { font-size: clamp(50px, 14.5vw, 128px); }
+.nada__entrada { margin-top: 2px; font-size: 17px; color: var(--tinta-2); max-width: 46ch; }
+.nada__txt { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; }
+.nada__btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.sello--nada { right: 10px; top: 30%; font-size: 26px; }
+
+/* ================================================================== */
+/* Ajustes del 19-11                                                   */
+/* ================================================================== */
+/* barra de estado: en el móvil, textos cortos para que no se corte (los largos van en .solo-esc) */
+.estado__in { gap: 18px; }
+@media (max-width: 370px) { .estado__tel { display: none; } }
+/* Últimas entradas: con cabecera de columnas, como un registro de verdad, y filas más bajas */
+.rc__cab { display: none; }
+.registro-campa { border-top: 0; }
+.rc__cab + .rc { border-top: 1px solid var(--negro); }
+.rc__ent em { font-style: normal; color: var(--o-boton); }
+
+@media (min-width: 640px) {
+  .estado__in { gap: 26px; }
+}
+
+@media (min-width: 1024px) {
+  .legal__cab { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; gap: 48px; padding: 20px 0 48px; }
+  .legal__entrada { font-size: 18px; padding-bottom: 8px; }
+  .legal__in { grid-template-columns: 380px minmax(0, 1fr); gap: 88px; align-items: start; }
+  .legal__lado { position: sticky; top: calc(var(--barra) + 24px); }
+  .legal__texto { max-width: 820px; }
+  .legal__tabla div { grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding: 14px 18px; }
+  .legal__tabla dt { padding-top: 3px; }
+
+  .nada__in { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 72px; align-items: start; min-height: calc(100svh - var(--estado) - var(--barra) - 72px); }
+  .nada__txt { order: -1; padding-top: 72px; gap: 18px; }
+  .nada__entrada { font-size: 18px; }
+  .nada__colgante { width: 100%; max-width: 400px; }
+  .nada__colgante .colgante__cable { height: 72px; }
+  .tag--nada .tag__cab b { font-size: 40px; }
+  .tag--nada .tag__c b { font-size: 30px; }
+  .tag--nada .tag__barras svg { height: 56px; }
+  .sello--nada { font-size: 40px; right: 20px; top: 34%; }
+
+  .rc__cab + .rc { border-top: 0; }
+  .rc__cab { display: grid; grid-template-columns: 112px 220px minmax(0, 1fr) 90px 110px 150px; column-gap: 24px; padding: 0 0 10px; border-bottom: 1px solid var(--negro); color: var(--tinta-2); }
+  .rc__cab span:nth-child(n+4) { text-align: right; }
+  .rc { grid-template-columns: 112px 220px minmax(0, 1fr) 90px 110px 150px; padding: 10px 0; }
+  .rc__nom { font-size: 26px; }
+}
